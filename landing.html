@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add this for DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script>
+        tailwind.config = {
+            plugins: [require("daisyui")],
+            daisyui: {
+                themes: ["light"],
+            },
+        }
+    </script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <style>
+        :root {
+            --color-cream: #EEB5CB;
+            --color-pink: #F5348A;
+            --color-peach: #E5BAB1;
+            --color-orange: #F1B237;
+            --color-red: #A81C1A;
+        }
+
+        /* Color classes */
+        .bg-cream { background-color: var(--color-cream); }
+        .bg-pink { background-color: var(--color-pink); }
+        .bg-peach { background-color: var(--color-peach); }
+        .bg-orange { background-color: var(--color-orange); }
+        .bg-red { background-color: var(--color-red); }
+
+        .text-cream { color: var(--color-cream); }
+        .text-pink { color: var(--color-pink); }
+        .text-peach { color: var(--color-peach); }
+        .text-orange { color: var(--color-orange); }
+        .text-red { color: var(--color-red); }
+
+        /* Animations */
+        .card {
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Add this font family rule */
+        body {
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        /* For specific headings if you want a different style */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        /* Update particles container z-index */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        /* Update section backgrounds z-index */
+        section {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Keep navigation above particles */
+        nav {
+            z-index: 50;
+        }
+
+        /* Make sure content is above particles */
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Add these styles to your existing style section */
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- Add this right after <body> tag -->
+    <div id="particles-js" style="position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 5; pointer-events: none;"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto">
+            <div class="flex-1">
+                <h1 class="text-white text-2xl font-bold font-serif hover:text-pink-100 transition-colors">ITE 4 Portfolio</h1>
+            </div>
+            <div class="flex-none hidden md:block">
+                <ul class="menu menu-horizontal px-1 text-white">
+                    <li><a href="#home" class="hover:bg-white/20 transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:bg-white/20 transition-colors">About</a></li>
+                    <li><a href="#portfolio" class="hover:bg-white/20 transition-colors">Portfolio</a></li>
+                    <li><a href="#contact" class="hover:bg-white/20 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div class="flex-none md:hidden">
+                <button class="btn btn-ghost text-white hover:bg-white/20">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center pt-16 relative">
+        <div class="absolute inset-0 z-0 parallax" 
+             style="background-image: url('images/backgrounds.jpg'); opacity: 0.9;">
+            <div class="overlay"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg inline-block">
+                        <h1 class="text-5xl md:text-7xl font-bold text-red mb-4 font-serif">Hello, I'm <span class="text-pink">Saidelyn Normaelo D. Borris</span></h1>
+                        <p class="text-xl mb-2 font-serif">BSIT - ITE Elective 4</p>
+                        <p class="text-xl font-serif">Dr. Rodolfo Raga</p>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-8 md:mt-0" data-aos="fade-left">
+                    <img src="images/saidelyn.png" alt="Hero Image" class="w-80 h-80 md:w-96 md:h-96 mx-auto rounded-full object-cover border-4 border-cream shadow-2xl hover:scale-105 transition duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-cream">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-red text-center mb-16 font-serif" data-aos="fade-up">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-6" data-aos="fade-right">
+                    <h3 class="text-4xl font-bold text-pink mb-4">What's up!</h3>
+                    <p class="text-lg md:text-xl leading-relaxed text-gray-700">Hi there! It's me, Saidelyn Normaelo D. Borris. A 4th year student of Jose Rizal University. I'm 21 years old, from the picturesque island of Palawan, and I was born on January 23. I experimented in fan fiction writing because I'm a huge bookworm at heart (I don't write anymore, though). You can probably find me grooving to R&B, hip-hop, or even exploring into the chaotic realm of noise music when I'm not busy with school works related activities. I'm a huge fan of K-pop, especially of groups like RIIZE and NCT, who always make my playlists sound great! I'm ready to make waves in the tech industry, I have big dreams, and I'm very excited to make my own path to the IT field.</p>
+                    <div class="flex space-x-4">
+
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+                    <div class="card bg-white/50 p-6 rounded-lg shadow-lg hover:animate-bounce">
+                        <img src="images/bading1.png" alt="Bading 1" class="w-full h-auto transition-transform duration-300 hover:scale-110">
+                    </div>
+                    <div class="card bg-white/50 p-6 rounded-lg shadow-lg hover:animate-bounce">
+                        <img src="images/bading2.png" alt="Bading 2" class="w-full h-auto transition-transform duration-300 hover:scale-110">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 relative">
+        <div class="absolute inset-0 z-0 parallax" 
+             style="background-image: url('images/portbg.png'); opacity: 0.9;">
+            <div class="overlay"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-4xl font-bold text-red text-center mb-16 font-serif" data-aos="fade-up">My Portfolio</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Prelims -->
+                <div class="card shadow-xl" data-aos="fade-up" style="background-color: #4889fd;">
+                    <figure class="px-4 pt-4">
+                        <img src="images/prelim.png" alt="Prelims" class="rounded-xl h-50 w-full object-cover">
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-2xl font-bold text-white">Prelims</h3>
+                        <p class="text-white">Description of your prelim projects...</p>
+                        <div class="card-actions justify-end mt-4">
+                            <button onclick="window.location.href='prelims.html'" class="btn btn-primary bg-white hover:bg-pink text-red hover:text-white border-none w-full">
+                                View More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Midterms -->
+                <div class="card bg-cream shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                    <figure class="px-4 pt-4">
+                        <img src="images/midterm.png" alt="Midterms" class="rounded-xl h-50 w-full object-cover">
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-2xl font-bold text-red">Midterms</h3>
+                        <p class="text-gray-700">Description of your midterm projects...</p>
+                        <div class="card-actions justify-end mt-4">
+                            <button onclick="window.location.href='midterms.html'" class="btn btn-primary bg-white hover:bg-pink text-red hover:text-white border-none w-full">
+                                View More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Finals -->
+                <div class="card bg-orange shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                    <figure class="px-4 pt-4">
+                        <img src="images/finals.png" alt="Finals" class="rounded-xl h-50 w-full object-cover">
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title text-2xl font-bold text-white">Finals</h3>
+                        <p class="text-white">Description of your final projects...</p>
+                        <div class="card-actions justify-end mt-4">
+                            <button onclick="window.location.href='finals.html'" class="btn btn-primary bg-white hover:bg-pink text-orange hover:text-white border-none w-full">
+                                View More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-peach">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-red text-center mb-16 font-serif" data-aos="fade-up">Contact Me</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8" data-aos="fade-up">
+                <!-- Email -->
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:transform hover:scale-105 transition-transform">
+                    <i class="fas fa-envelope text-4xl text-red mb-4"></i>
+                    <h3 class="text-xl font-bold text-red mb-2">Email</h3>
+                    <p class="text-gray-600">synisasynner@gmail.com</p>
+                </div>
+
+                <!-- Phone -->
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:transform hover:scale-105 transition-transform">
+                    <i class="fas fa-phone text-4xl text-red mb-4"></i>
+                    <h3 class="text-xl font-bold text-red mb-2">Phone</h3>
+                    <p class="text-gray-600">0928 4710 987</p>
+                </div>
+
+                <!-- Location -->
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center hover:transform hover:scale-105 transition-transform">
+                    <i class="fas fa-map-marker-alt text-4xl text-red mb-4"></i>
+                    <h3 class="text-xl font-bold text-red mb-2">Location</h3>
+                    <p class="text-gray-600">Palawan, Philippines</p>
+                </div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="flex justify-center space-x-6 mt-12" data-aos="fade-up">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-red text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+
+            </div>
+            <p class="font-serif">&copy; 2024  SYNNER. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 15,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#ffffff"
+                },
+                shape: {
+                    type: "image",
+                    image: {
+                        src: "images/petals.png",  // Make sure this path matches your image location
+                        width: 100,
+                        height: 100
+                    }
+                },
+                opacity: {
+                    value: 0.8,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.4,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 20,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 4,
+                        size_min: 10,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: false
+                },
+                move: {
+                    enable: true,
+                    speed: 3,
+                    direction: "bottom",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: true,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                },
+                modes: {
+                    repulse: {
+                        distance: 100,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterms - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --color-cream: #EEB5CB;
+            --color-pink: #F5348A;
+            --color-peach: #E5BAB1;
+            --color-orange: #F1B237;
+            --color-red: #A81C1A;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        /* Color classes */
+        .bg-cream { background-color: var(--color-cream); }
+        .bg-pink { background-color: var(--color-pink); }
+        .bg-peach { background-color: var(--color-peach); }
+        .bg-orange { background-color: var(--color-orange); }
+        .bg-red { background-color: var(--color-red); }
+
+        .text-cream { color: var(--color-cream); }
+        .text-pink { color: var(--color-pink); }
+        .text-peach { color: var(--color-peach); }
+        .text-orange { color: var(--color-orange); }
+        .text-red { color: var(--color-red); }
+
+        /* Effects */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(245, 52, 138, 0.2);
+        }
+
+        .pink-gradient {
+            background: linear-gradient(135deg, var(--color-pink) 0%, #ff69b4 100%);
+        }
+
+        .glow-effect {
+            box-shadow: 0 0 15px rgba(245, 52, 138, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .glow-effect:hover {
+            box-shadow: 0 0 25px rgba(245, 52, 138, 0.6);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 10px rgba(245, 52, 138, 0.4);
+        }
+
+        .floral-card {
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 242, 245, 0.95));
+            border: 1px solid rgba(238, 181, 203, 0.3);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(245, 52, 138, 0.2);
+        }
+
+        .card-image-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image-wrapper::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background: linear-gradient(to top, rgba(245, 52, 138, 0.1), transparent);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-peach to-cream min-h-screen relative">
+    <!-- Background Image -->
+    <div class="fixed inset-0 z-0">
+        <img src="images/flowers.png" alt="Flowers Background" class="w-full h-full object-cover opacity-90">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="landing.html" class="text-white text-2xl font-bold font-serif hover:text-pink-100 transition-colors">Portfolio</a>
+                <a href="landing.html" class="inline-flex items-center px-4 py-2 text-white hover:bg-white/20 rounded-lg transition-colors">
+                    <i class="fas fa-home mr-2"></i>Back to Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="relative z-10">
+        <div class="container mx-auto px-4 pt-24 pb-12">
+            <!-- Header -->
+            <div class="text-center mb-16 glass-effect p-8 shadow-xl glow-effect" data-aos="fade-down">
+                <h1 class="text-5xl font-bold text-pink glow-text mb-4 font-serif animate-pulse">Midterms Portfolio</h1>
+                <p class="text-lg text-gray-800 font-medium">A collection of my midterm activities and achievements</p>
+            </div>
+
+            <!-- Activities Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 max-w-7xl mx-auto">
+                <!-- Activity 1 -->
+                <div class="floral-card rounded-xl shadow-xl overflow-hidden card-hover glow-effect relative" data-aos="fade-up">
+                    <div class="card-image-wrapper px-6 pt-6">
+                        <img src="images/pr1.png" alt="Activity 1" 
+                             class="rounded-xl h-48 w-full object-contain bg-white/50 transform transition-transform duration-300 hover:scale-105" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-flower text-pink opacity-50 mr-2"></i>
+                            <h2 class="text-xl font-bold text-pink glow-text">Activity 1</h2>
+                        </div>
+                        <p class="text-gray-600 mb-4 flex-grow font-serif">
+                            Description of the first midterm activity and what was learned...
+                        </p>
+                        <div class="text-right mt-4 h-12">
+                            <button class="inline-flex items-center px-6 py-2 pink-gradient hover:opacity-90 text-white rounded-full transition-all duration-300 glow-effect" 
+                                    onclick="window.open('midterm1.html')">
+                                <span class="relative z-10">View Details</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity 2 -->
+                <div class="floral-card rounded-xl shadow-xl overflow-hidden card-hover glow-effect relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image-wrapper px-6 pt-6">
+                        <img src="images/pr2.png" alt="Activity 2" 
+                             class="rounded-xl h-48 w-full object-contain bg-white/50 transform transition-transform duration-300 hover:scale-105" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-flower text-pink opacity-50 mr-2"></i>
+                            <h2 class="text-xl font-bold text-pink glow-text">Activity 2</h2>
+                        </div>
+                        <p class="text-gray-600 mb-4 flex-grow font-serif">
+                            Description of the second midterm activity and its outcomes...
+                        </p>
+                        <div class="text-right mt-4 h-12">
+                            <button class="inline-flex items-center px-6 py-2 pink-gradient hover:opacity-90 text-white rounded-full transition-all duration-300 glow-effect" 
+                                    onclick="window.open('midterm2.html')">
+                                <span class="relative z-10">View Details</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity 3 -->
+                <div class="floral-card rounded-xl shadow-xl overflow-hidden card-hover glow-effect relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image-wrapper px-6 pt-6">
+                        <img src="images/pr3.png" alt="Activity 3" 
+                             class="rounded-xl h-48 w-full object-contain bg-white/50 transform transition-transform duration-300 hover:scale-105" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-flower text-pink opacity-50 mr-2"></i>
+                            <h2 class="text-xl font-bold text-pink glow-text">Activity 3</h2>
+                        </div>
+                        <p class="text-gray-600 mb-4 flex-grow font-serif">
+                            Description of the third midterm activity and its impact...
+                        </p>
+                        <div class="text-right mt-4 h-12">
+                            <button class="inline-flex items-center px-6 py-2 pink-gradient hover:opacity-90 text-white rounded-full transition-all duration-300 glow-effect" 
+                                    onclick="window.open('midterm3.html')">
+                                <span class="relative z-10">View Details</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity 4 -->
+                <div class="floral-card rounded-xl shadow-xl overflow-hidden card-hover glow-effect relative" data-aos="fade-up">
+                    <div class="card-image-wrapper px-6 pt-6">
+                        <img src="images/pr4.png" alt="Activity 4" 
+                             class="rounded-xl h-48 w-full object-contain bg-white/50 transform transition-transform duration-300 hover:scale-105" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-flower text-pink opacity-50 mr-2"></i>
+                            <h2 class="text-xl font-bold text-pink glow-text">Activity 4</h2>
+                        </div>
+                        <p class="text-gray-600 mb-4 flex-grow font-serif">
+                            Description of the fourth midterm activity and its impact...
+                        </p>
+                        <div class="text-right mt-4 h-12">
+                            <button class="inline-flex items-center px-6 py-2 pink-gradient hover:opacity-90 text-white rounded-full transition-all duration-300 glow-effect" 
+                                    onclick="window.open('midterm4.html')">
+                                <span class="relative z-10">View Details</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity 5 -->
+                <div class="floral-card rounded-xl shadow-xl overflow-hidden card-hover glow-effect relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image-wrapper px-6 pt-6">
+                        <img src="images/pr5.png" alt="Activity 5" 
+                             class="rounded-xl h-48 w-full object-contain bg-white/50 transform transition-transform duration-300 hover:scale-105" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-flower text-pink opacity-50 mr-2"></i>
+                            <h2 class="text-xl font-bold text-pink glow-text">Activity 5</h2>
+                        </div>
+                        <p class="text-gray-600 mb-4 flex-grow font-serif">
+                            Description of the fifth midterm activity and its achievements...
+                        </p>
+                        <div class="text-right mt-4 h-12">
+                            <button class="inline-flex items-center px-6 py-2 pink-gradient hover:opacity-90 text-white rounded-full transition-all duration-300 glow-effect" 
+                                    onclick="window.open('midterm5.html')">
+                                <span class="relative z-10">View Details</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity 6 -->
+                <div class="floral-card rounded-xl shadow-xl overflow-hidden card-hover glow-effect relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image-wrapper px-6 pt-6">
+                        <img src="images/pr6.png" alt="Activity 6" 
+                             class="rounded-xl h-48 w-full object-contain bg-white/50 transform transition-transform duration-300 hover:scale-105" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-flower text-pink opacity-50 mr-2"></i>
+                            <h2 class="text-xl font-bold text-pink glow-text">Activity 6</h2>
+                        </div>
+                        <p class="text-gray-600 mb-4 flex-grow font-serif">
+                            Description of the sixth midterm activity and its results...
+                        </p>
+                        <div class="text-right mt-4 h-12">
+                            <button class="inline-flex items-center px-6 py-2 pink-gradient hover:opacity-90 text-white rounded-full transition-all duration-300 glow-effect" 
+                                    onclick="window.open('midterm6.html')">
+                                <span class="relative z-10">View Details</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overall Reflection -->
+            <div class="max-w-4xl mx-auto" data-aos="fade-up">
+                <div class="glass-effect rounded-xl shadow-xl p-8 glow-effect">
+                    <h2 class="flex items-center text-2xl font-bold text-pink glow-text mb-4">
+                        <i class="fas fa-lightbulb mr-2"></i>Overall Reflection
+                    </h2>
+                    <div class="space-y-4">
+                        <p class="text-gray-800 font-medium">
+                            During the midterm period, I had the opportunity to explore various aspects...
+                        </p>
+                        <!-- Add more reflection paragraphs -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

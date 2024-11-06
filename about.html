@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Saidelyn Normaelo D. Borris</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <style>
+        :root {
+            --color-cream: #EEB5CB;
+            --color-pink: #F5348A;
+            --color-peach: #E5BAB1;
+            --color-orange: #F1B237;
+            --color-red: #A81C1A;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .bg-cream { background-color: var(--color-cream); }
+        .bg-pink { background-color: var(--color-pink); }
+        .bg-peach { background-color: var(--color-peach); }
+        .bg-orange { background-color: var(--color-orange); }
+        .bg-red { background-color: var(--color-red); }
+
+        .text-cream { color: var(--color-cream); }
+        .text-pink { color: var(--color-pink); }
+        .text-peach { color: var(--color-peach); }
+        .text-orange { color: var(--color-orange); }
+        .text-red { color: var(--color-red); }
+
+        .section-card {
+            transition: transform 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Update particles container z-index */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        /* Update section backgrounds z-index */
+        section {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Keep navigation above particles */
+        nav {
+            z-index: 50;
+        }
+
+        /* Make sure content is above particles */
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .glass-card {
+            @apply relative bg-white/40 backdrop-blur-md rounded-2xl shadow-xl overflow-hidden;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-peach to-cream min-h-screen">
+    <!-- Background Image -->
+    <div class="fixed inset-0 z-0">
+        <img src="images/background.jpg" alt="Background" class="w-full h-full object-cover opacity-20">
+    </div>
+
+    <!-- Particles Effect -->
+    <div id="particles-js" class="fixed inset-0 z-1 pointer-events-none"></div>
+
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="landing.html" class="text-white text-2xl font-bold font-serif hover:text-pink-100 transition-colors">Portfolio</a>
+                <a href="landing.html" class="inline-flex items-center px-4 py-2 text-white hover:bg-white/20 rounded-lg transition-colors">
+                    <i class="fas fa-home mr-2"></i>Back to Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 pt-24 pb-12 relative z-10">
+        <!-- Profile Section -->
+        <section class="relative mb-20">
+            <div class="max-w-6xl mx-auto bg-white/90 backdrop-blur-md rounded-2xl shadow-xl p-8 md:p-12" data-aos="fade-up">
+                <div class="grid md:grid-cols-3 gap-8 items-center">
+                    <!-- Profile Image -->
+                    <div class="text-center md:text-left">
+                        <div class="relative inline-block">
+                            <div class="absolute inset-0 bg-gradient-to-br from-pink to-red rounded-full animate-pulse blur-xl opacity-50"></div>
+                            <img src="images/saidelyn.png" alt="Saidelyn Normaelo D. Borris" 
+                                 class="w-48 h-48 rounded-full relative border-4 border-white shadow-2xl">
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Info -->
+                    <div class="md:col-span-2">
+                        <h1 class="text-4xl font-bold text-red mb-4 font-serif">Saidelyn Normaelo D. Borris</h1>
+                        <p class="text-lg text-gray-700 font-serif leading-relaxed">
+                            Hi there! It's me, Saidelyn Normaelo D. Borris. A 4th year student of Jose Rizal University. I'm 21 years old, from the picturesque island of Palawan, and I was born on January 23. I experimented in fan fiction writing because I'm a huge bookworm at heart (I don't write anymore, though). You can probably find me grooving to R&B, hip-hop, or even exploring into the chaotic realm of noise music when I'm not busy with school works related activities. I'm a huge fan of K-pop, especially of groups like RIIZE and NCT, who always make my playlists sound great! I'm ready to make waves in the tech industry, I have big dreams, and I'm very excited to make my own path to the IT field.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Cards Grid -->
+        <div class="flex justify-center items-start gap-8 max-w-6xl mx-auto">
+            <!-- Skills Card -->
+            <div class="glass-card group flex-1" data-aos="fade-up" data-aos-delay="100">
+                <div class="absolute inset-0 bg-gradient-to-br from-pink/10 to-red/10 rounded-2xl transform group-hover:scale-105 transition-transform duration-300"></div>
+                <div class="relative p-8">
+                    <div class="text-center mb-6">
+                        <span class="inline-block p-3 bg-red/10 rounded-full mb-4">
+                            <i class="fas fa-code text-2xl text-red"></i>
+                        </span>
+                        <h2 class="text-2xl font-bold text-red font-serif">Skills</h2>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white/50 rounded-xl p-4">
+                            <h3 class="font-bold text-red mb-2 font-serif">Technical</h3>
+                            <ul class="list-disc list-inside font-serif space-y-1">
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                                <li>PHP</li>
+                                <li>Python</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white/50 rounded-xl p-4">
+                            <h3 class="font-bold text-red mb-2 font-serif">Soft Skills</h3>
+                            <ul class="list-disc list-inside font-serif space-y-1">
+                                <li>Problem Solving</li>
+                                <li>Team Collaboration</li>
+                                <li>Communication</li>
+                                <li>Time Management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hobbies Card -->
+            <div class="glass-card group flex-1" data-aos="fade-up" data-aos-delay="200">
+                <div class="absolute inset-0 bg-gradient-to-br from-orange/10 to-pink/10 rounded-2xl transform group-hover:scale-105 transition-transform duration-300"></div>
+                <div class="relative p-8">
+                    <div class="text-center mb-6">
+                        <span class="inline-block p-3 bg-orange/10 rounded-full mb-4">
+                            <i class="fas fa-heart text-2xl text-orange"></i>
+                        </span>
+                        <h2 class="text-2xl font-bold text-orange font-serif">Hobbies</h2>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white/50 rounded-xl p-4">
+                            <h3 class="font-bold text-orange mb-2 font-serif">Creative</h3>
+                            <ul class="list-disc list-inside font-serif space-y-1">
+                                <li>Editing</li>
+                                <li>Writing</li>
+                                <li>Photography</li>
+                                <li>Web Design</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white/50 rounded-xl p-4">
+                            <h3 class="font-bold text-orange mb-2 font-serif">Personal</h3>
+                            <ul class="list-disc list-inside font-serif space-y-1">
+                                <li>Reading</li>
+                                <li>Traveling</li>
+                                <li>Music</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Card -->
+            <div class="glass-card group flex-1" data-aos="fade-up" data-aos-delay="300">
+                <div class="absolute inset-0 bg-gradient-to-br from-cream/10 to-peach/10 rounded-2xl transform group-hover:scale-105 transition-transform duration-300"></div>
+                <div class="relative p-8">
+                    <div class="text-center mb-6">
+                        <span class="inline-block p-3 bg-pink/10 rounded-full mb-4">
+                            <i class="fas fa-address-card text-2xl text-pink"></i>
+                        </span>
+                        <h2 class="text-2xl font-bold text-pink font-serif">Contact</h2>
+                    </div>
+                    <div class="space-y-6">
+                        <a href="mailto:synisasynner@gmail.com" class="flex items-center p-4 bg-white/50 rounded-xl hover:bg-white/70 transition-colors">
+                            <i class="fas fa-envelope text-pink mr-4 text-xl"></i>
+                            <span class="font-serif">synisasynner@gmail.com</span>
+                        </a>
+                        <a href="tel:09284710987" class="flex items-center p-4 bg-white/50 rounded-xl hover:bg-white/70 transition-colors">
+                            <i class="fas fa-phone text-pink mr-4 text-xl"></i>
+                            <span class="font-serif">0928 4710 987</span>
+                        </a>
+                        <div class="flex items-center p-4 bg-white/50 rounded-xl">
+                            <i class="fas fa-map-marker-alt text-pink mr-4 text-xl"></i>
+                            <span class="font-serif">Palawan, Philippines</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 15,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#ffffff"
+                },
+                shape: {
+                    type: "image",
+                    image: {
+                        src: "images/petals.png",
+                        width: 100,
+                        height: 100
+                    }
+                },
+                opacity: {
+                    value: 0.8,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.4,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 20,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 4,
+                        size_min: 10,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: false
+                },
+                move: {
+                    enable: true,
+                    speed: 3,
+                    direction: "bottom",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: true,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                },
+                modes: {
+                    repulse: {
+                        distance: 100,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    }
+                }
+            },
+            retina_detect: true
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if the particles container exists
+            const particlesContainer = document.getElementById('particles-js');
+            if (particlesContainer) {
+                console.log('Particles container found');
+                // Check its dimensions
+                console.log('Container dimensions:', {
+                    width: particlesContainer.offsetWidth,
+                    height: particlesContainer.offsetHeight
+                });
+            } else {
+                console.error('Particles container not found');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 - Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --color-cream: #EEB5CB;
+            --color-pink: #F5348A;
+            --color-peach: #E5BAB1;
+            --color-orange: #F1B237;
+            --color-red: #A81C1A;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .bg-cream { background-color: var(--color-cream); }
+        .bg-pink { background-color: var(--color-pink); }
+        .bg-peach { background-color: var(--color-peach); }
+        .bg-orange { background-color: var(--color-orange); }
+        .bg-red { background-color: var(--color-red); }
+
+        .text-cream { color: var(--color-cream); }
+        .text-pink { color: var(--color-pink); }
+        .text-peach { color: var(--color-peach); }
+        .text-orange { color: var(--color-orange); }
+        .text-red { color: var(--color-red); }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        
+        .document-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .document-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .grade-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 8px solid var(--color-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            position: relative;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .grade-circle::after {
+            content: '';
+            position: absolute;
+            width: calc(100% + 20px);
+            height: calc(100% + 20px);
+            border-radius: 50%;
+            border: 2px solid var(--color-red);
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-peach to-cream min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-red fixed w-full z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="landing.html" class="text-white text-2xl font-bold font-serif">Portfolio</a>
+                <a href="prelims.html" class="inline-flex items-center px-4 py-2 text-white hover:bg-pink/20 rounded-lg transition-colors">
+                    <i class="fas fa-arrow-left mr-2"></i>Back to Prelims
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 pt-24 pb-12">
+        <!-- Header with Breadcrumb -->
+        <div class="mb-16" data-aos="fade-down">
+            <div class="flex items-center justify-center space-x-2 text-gray-600 mb-4">
+                <a href="landing.html" class="hover:text-red">Home</a>
+                <i class="fas fa-chevron-right text-sm"></i>
+                <a href="prelims.html" class="hover:text-red">Prelims</a>
+                <i class="fas fa-chevron-right text-sm"></i>
+                <span class="text-red">Exercise 1</span>
+            </div>
+            <h1 class="text-5xl font-bold text-red mb-4 font-serif text-center">Exercise 1</h1>
+            <p class="text-lg text-gray-700 text-center max-w-2xl mx-auto">
+                Introduction to Data Science and Basic Concepts
+            </p>
+        </div>
+
+        <!-- Performance and Reflection Section -->
+        <div class="mb-16">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Grade Circle -->
+                <div class="glass-effect rounded-2xl shadow-xl p-8" data-aos="fade-right">
+                    <h2 class="text-2xl font-bold text-red mb-6 text-center">Overall Grade</h2>
+                    <div class="grade-circle mb-4">
+                        <div class="text-center">
+                            <div class="text-7xl font-bold text-red">95</div>
+                            <div class="text-sm text-gray-600 mt-1">Excellence</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reflection Section -->
+                <div data-aos="fade-left">
+                    <div class="glass-effect rounded-xl shadow-xl p-8 h-full">
+                        <h2 class="flex items-center text-2xl font-bold text-red mb-6">
+                            <i class="fas fa-lightbulb mr-2"></i>Learning Reflection
+                        </h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-8 h-8 bg-red/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-lightbulb text-red"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2">Key Learnings</h3>
+                                    <p class="text-gray-700">
+                                        Understanding fundamental concepts of data science and their applications...
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-8 h-8 bg-red/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-puzzle-piece text-red"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2">Challenges & Solutions</h3>
+                                    <p class="text-gray-700">
+                                        Overcoming initial challenges in data handling and analysis...
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-8 h-8 bg-red/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-road text-red"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2">Future Applications</h3>
+                                    <p class="text-gray-700">
+                                        Planning to build upon these foundational concepts in future exercises...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Documents Section -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold text-red mb-8 text-center">Exercise Materials</h2>
+            <div class="grid md:grid-cols-1 lg:grid-cols-1 gap-8">
+                <!-- Exercise Documentation -->
+                <div class="glass-effect rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300" 
+                     data-aos="fade-up">
+                    <div class="relative h-96 overflow-hidden">
+                        <img src="images/pdf-preview.png" alt="Exercise 1 PDF Preview" 
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <h3 class="text-white font-bold text-lg mb-1">Exercise Documentation</h3>
+                            <p class="text-white/80 text-sm">Complete exercise documentation and implementation details</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-file-pdf text-red mr-2"></i>
+                                <span class="text-sm text-gray-600">PDF Document</span>
+                            </div>
+                            <span class="text-xs bg-red/10 text-red px-2 py-1 rounded-full">PDF</span>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1h9B_d11WzO5VAicpoAd39hQbo954mFe7/view?usp=sharing" 
+                           target="_blank"
+                           class="inline-flex items-center justify-center w-full px-4 py-2 bg-red hover:bg-pink text-white rounded-lg transition-colors">
+                            <i class="fas fa-external-link-alt mr-2"></i>View PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-red text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="hover:text-orange transition-colors"><i class="fab fa-github text-xl"></i></a>
+                <a href="#" class="hover:text-orange transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="#" class="hover:text-orange transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+            </div>
+            <p class="font-serif">&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
