@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 3 - Details</title>
+    <title>Exercise 4 - Details</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -68,6 +68,16 @@
             opacity: 0.3;
         }
 
+        .pink-gradient-bg {
+            background: linear-gradient(135deg, var(--color-pink) 0%, #ff69b4 100%);
+        }
+
+        .pink-gradient-text {
+            background: linear-gradient(135deg, var(--color-pink) 0%, #ff69b4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
         .floral-card {
             background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 242, 245, 0.95));
             border: 1px solid rgba(238, 181, 203, 0.3);
@@ -105,53 +115,43 @@
         .glow-effect:hover {
             box-shadow: 0 0 25px rgba(245, 52, 138, 0.6);
         }
-
-        .pink-gradient-bg {
-            background: linear-gradient(135deg, var(--color-pink) 0%, #ff69b4 100%);
-        }
-
-        .pink-gradient-text {
-            background: linear-gradient(135deg, var(--color-pink) 0%, #ff69b4 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-peach to-cream min-h-screen relative">
-    <!-- Background Image -->
+    <!-- Add Background Image -->
     <div class="fixed inset-0 z-0">
         <img src="images/flowers.png" alt="Vines Background" class="w-full h-full object-cover opacity-90">
     </div>
 
-    <!-- Navigation -->
+    <!-- Update Navigation -->
     <nav class="bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 fixed w-full z-50 shadow-lg">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <a href="landing.html" class="text-white text-2xl font-bold font-serif hover:text-pink-100 transition-colors">Portfolio</a>
-                <a href="prelims.html" class="inline-flex items-center px-4 py-2 text-white hover:bg-white/20 rounded-lg transition-colors">
+                <a href="landing.html" class="text-white text-2xl font-bold font-serif">Portfolio</a>
+                <a href="prelims.html" class="inline-flex items-center px-4 py-2 text-white hover:bg-pink/20 rounded-lg transition-colors">
                     <i class="fas fa-arrow-left mr-2"></i>Back to Prelims
                 </a>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
+    <!-- Update Main Content -->
     <div class="relative z-10">
         <div class="container mx-auto px-4 pt-24 pb-12">
-            <!-- Header with Breadcrumb -->
+            <!-- Update Header -->
             <div class="text-center mb-16 glass-effect p-8 shadow-xl glow-effect" data-aos="fade-down">
                 <div class="flex items-center justify-center space-x-2 text-gray-600 mb-4">
                     <a href="landing.html" class="hover:text-pink">Home</a>
                     <i class="fas fa-chevron-right text-sm"></i>
                     <a href="prelims.html" class="hover:text-pink">Prelims</a>
                     <i class="fas fa-chevron-right text-sm"></i>
-                    <span class="text-pink">Exercise 3.1</span>
+                    <span class="text-pink">Preliminary Examination</span>
                 </div>
-                <h1 class="text-5xl font-bold text-pink glow-text mb-4 font-serif animate-pulse">Exercise 3.1</h1>
-                <p class="text-lg text-gray-800 font-medium">Natural Language Processing and Text Analysis Implementation</p>
+                <h1 class="text-5xl font-bold text-pink glow-text mb-4 font-serif animate-pulse">Preliminary Examination</h1>
+                <p class="text-lg text-gray-800 font-medium">Examination Period</p>
             </div>
 
-            <!-- Performance and Reflection Section -->
+            <!-- Update Grade and Reflection sections -->
             <div class="mb-16">
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Grade Circle -->
@@ -160,8 +160,8 @@
                             <h2 class="text-2xl font-bold text-pink glow-text mb-6 text-center">Overall Grade</h2>
                             <div class="grade-circle mb-4">
                                 <div class="text-center">
-                                    <div class="text-7xl font-bold text-pink">90</div>
-                                    <div class="text-sm text-gray-600 mt-1">Getting there!</div>
+                                    <div class="text-7xl font-bold text-pink">57</div>
+                                    <div class="text-sm text-gray-600 mt-1">Wow! Cool!</div>
                                 </div>
                             </div>
                         </div>
@@ -180,7 +180,7 @@
                                     </div>
                                     <div>
                                         <p class="text-gray-700 leading-relaxed">
-                                            I find this activity so cool while learning NLP-it actually put the meaning of putting text representation to practice. Since I wasn't quite good at maths and calculation, I searched about and checked on how techniques such as TF-IDF or word embedding transform raw texts into numerals for interpretation from models. It is rather cool to see representations where one can find an amount of meaning and relevance given for words and where selecting an appropriate method seems important. These techniques help me so I could understand how much they enhanced the effectiveness of NLP models. In summary, all things considered, I learned from this experience how much careful text representation is essential to getting accurate results.
+                                            It feels great to sit for an exam with full confidence, especially when I know that I have put in the effort to study. Since I had taken the time to learn the material, I felt prepared and ready to take on every question. Seeing my efforts pay off and going into the test even still doubting myself in the process, made me so happy. I spent nights searching and researching for the parts where I feel lacking. It was worth it!
                                         </p>
                                     </div>
                                 </div>
@@ -193,31 +193,70 @@
             <!-- Documents Section -->
             <div class="mb-16">
                 <h2 class="text-3xl font-bold text-pink glow-text mb-8 text-center">Exercise Materials</h2>
-                <div class="grid md:grid-cols-1 lg:grid-cols-1 gap-8">
-                    <!-- NLP Annotation Notebook -->
+                <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- First Card -->
                     <div class="floral-card rounded-xl shadow-xl overflow-hidden card-hover glow-effect" data-aos="fade-up">
-                        <div class="relative h-[500px] overflow-hidden bg-white">
-                            <img src="images/exer31.png" alt="NLP Annotation Notebook Preview" 
-                                 class="w-full h-full object-contain transform transition-transform duration-300 hover:scale-105">
+                        <div class="relative h-[500px] overflow-hidden">
+                            <img src="images/pex1.jpg" alt="Preliminary Exam Part 1" 
+                                 class="w-full h-full object-fill transform transition-transform duration-300 hover:scale-105">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                             <div class="absolute bottom-4 left-4 right-4">
-                                <h3 class="text-white font-bold text-lg mb-1">NLP Annotation Notebook</h3>
-                                <p class="text-white/80 text-sm">Text analysis and NLP implementation with detailed annotations</p>
+                                <h3 class="text-white font-bold text-lg mb-1">Part 1</h3>
+                                <p class="text-white/80 text-sm">Preliminary Examination Documentation</p>
                             </div>
                         </div>
-                        <div class="p-6">
-                            <div class="flex items-center justify-between mb-4">
+                        <div class="p-4">
+                            <div class="flex items-center justify-between">
                                 <div class="flex items-center">
-                                    <i class="fas fa-code text-pink mr-2"></i>
-                                    <span class="text-sm text-gray-600">Google Colab</span>
+                                    <i class="fas fa-file-word text-pink mr-2"></i>
+                                    <span class="text-sm text-gray-600">Document 1</span>
                                 </div>
-                                <span class="text-xs bg-pink/10 text-pink px-2 py-1 rounded-full">Python</span>
+                                <span class="text-xs bg-pink/10 text-pink px-2 py-1 rounded-full">Part 1</span>
                             </div>
-                            <a href="https://colab.research.google.com/drive/1M1ZjivbgbSF_kQ00FXxfuouKgFvFjvLD?usp=sharing" 
-                               target="_blank"
-                               class="inline-flex items-center justify-center w-full px-4 py-2 pink-gradient-bg hover:opacity-90 text-white rounded-lg transition-colors">
-                                <i class="fas fa-external-link-alt mr-2"></i>View Notebook
-                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Second Card -->
+                    <div class="floral-card rounded-xl shadow-xl overflow-hidden card-hover glow-effect" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative h-[500px] overflow-hidden">
+                            <img src="images/pex2.jpg" alt="Preliminary Exam Part 2" 
+                                 class="w-full h-full object-fill transform transition-transform duration-300 hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="text-white font-bold text-lg mb-1">Part 2</h3>
+                                <p class="text-white/80 text-sm">Preliminary Examination Documentation</p>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <i class="fas fa-file-word text-pink mr-2"></i>
+                                    <span class="text-sm text-gray-600">Document 2</span>
+                                </div>
+                                <span class="text-xs bg-pink/10 text-pink px-2 py-1 rounded-full">Part 2</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Third Card -->
+                    <div class="floral-card rounded-xl shadow-xl overflow-hidden card-hover glow-effect" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative h-[500px] overflow-hidden">
+                            <img src="images/pex3.jpg" alt="Preliminary Exam Part 3" 
+                                 class="w-full h-full object-fill transform transition-transform duration-300 hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="text-white font-bold text-lg mb-1">Part 3</h3>
+                                <p class="text-white/80 text-sm">Preliminary Examination Documentation</p>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <i class="fas fa-file-word text-pink mr-2"></i>
+                                    <span class="text-sm text-gray-600">Document 3</span>
+                                </div>
+                                <span class="text-xs bg-pink/10 text-pink px-2 py-1 rounded-full">Part 3</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -225,6 +264,17 @@
         </div>
     </div>
 
+    <!-- Update Footer -->
+    <footer class="pink-gradient-bg text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="hover:text-orange transition-colors"><i class="fab fa-github text-xl"></i></a>
+                <a href="#" class="hover:text-orange transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="#" class="hover:text-orange transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+            </div>
+            <p class="font-serif">&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script>
         AOS.init({

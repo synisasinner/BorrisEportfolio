@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 3 - Details</title>
+    <title>Midterm 3 - Details</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -71,7 +71,6 @@
         .floral-card {
             background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 242, 245, 0.95));
             border: 1px solid rgba(238, 181, 203, 0.3);
-            position: relative;
         }
 
         .floral-card::before {
@@ -129,7 +128,7 @@
             <div class="flex justify-between items-center">
                 <a href="landing.html" class="text-white text-2xl font-bold font-serif hover:text-pink-100 transition-colors">Portfolio</a>
                 <a href="prelims.html" class="inline-flex items-center px-4 py-2 text-white hover:bg-white/20 rounded-lg transition-colors">
-                    <i class="fas fa-arrow-left mr-2"></i>Back to Prelims
+                    <i class="fas fa-arrow-left mr-2"></i>Back to Midterms
                 </a>
             </div>
         </div>
@@ -138,17 +137,17 @@
     <!-- Main Content -->
     <div class="relative z-10">
         <div class="container mx-auto px-4 pt-24 pb-12">
-            <!-- Header with Breadcrumb -->
+            <!-- Header -->
             <div class="text-center mb-16 glass-effect p-8 shadow-xl glow-effect" data-aos="fade-down">
                 <div class="flex items-center justify-center space-x-2 text-gray-600 mb-4">
                     <a href="landing.html" class="hover:text-pink">Home</a>
                     <i class="fas fa-chevron-right text-sm"></i>
-                    <a href="prelims.html" class="hover:text-pink">Prelims</a>
+                    <a href="prelims.html" class="hover:text-pink">Midterms</a>
                     <i class="fas fa-chevron-right text-sm"></i>
-                    <span class="text-pink">Exercise 3.1</span>
+                    <span class="text-pink">Exercise 5</span>
                 </div>
-                <h1 class="text-5xl font-bold text-pink glow-text mb-4 font-serif animate-pulse">Exercise 3.1</h1>
-                <p class="text-lg text-gray-800 font-medium">Natural Language Processing and Text Analysis Implementation</p>
+                <h1 class="text-5xl font-bold text-pink glow-text mb-4 font-serif animate-pulse">Exercise 5</h1>
+                <p class="text-lg text-gray-800 font-medium">BERT-based Question and Answering System</p>
             </div>
 
             <!-- Performance and Reflection Section -->
@@ -160,8 +159,8 @@
                             <h2 class="text-2xl font-bold text-pink glow-text mb-6 text-center">Overall Grade</h2>
                             <div class="grade-circle mb-4">
                                 <div class="text-center">
-                                    <div class="text-7xl font-bold text-pink">90</div>
-                                    <div class="text-sm text-gray-600 mt-1">Getting there!</div>
+                                    <div class="text-7xl font-bold text-pink">95</div>
+                                    <div class="text-sm text-gray-600 mt-1">Aim High!</div>
                                 </div>
                             </div>
                         </div>
@@ -180,7 +179,7 @@
                                     </div>
                                     <div>
                                         <p class="text-gray-700 leading-relaxed">
-                                            I find this activity so cool while learning NLP-it actually put the meaning of putting text representation to practice. Since I wasn't quite good at maths and calculation, I searched about and checked on how techniques such as TF-IDF or word embedding transform raw texts into numerals for interpretation from models. It is rather cool to see representations where one can find an amount of meaning and relevance given for words and where selecting an appropriate method seems important. These techniques help me so I could understand how much they enhanced the effectiveness of NLP models. In summary, all things considered, I learned from this experience how much careful text representation is essential to getting accurate results.
+                                            I gained a better understanding of model performance across various architectures, such as RoBERTa, ALBERT, and DistilBERT, by evaluating a BERT-based question-answering system. Each model had its own advantages: DistilBERT balanced speed and reasonable accuracy, ALBERT was lightweight and efficient, and RoBERTa frequently produced strong accuracy. By comparing these models, it became clear how response accuracy and processing time are impacted by variables such as model size and architecture. I discovered that probability-based evaluation metrics were useful in capturing the confidence of each model and offering information about how well-suited they were for different question-answering tasks. All things considered, testing these BERT variations brought to light the trade-offs between accuracy and speed as well as the significance of model selection in reaching particular project objectives.
                                         </p>
                                     </div>
                                 </div>
@@ -193,16 +192,76 @@
             <!-- Documents Section -->
             <div class="mb-16">
                 <h2 class="text-3xl font-bold text-pink glow-text mb-8 text-center">Exercise Materials</h2>
-                <div class="grid md:grid-cols-1 lg:grid-cols-1 gap-8">
-                    <!-- NLP Annotation Notebook -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Performance Data Spreadsheet -->
                     <div class="floral-card rounded-xl shadow-xl overflow-hidden card-hover glow-effect" data-aos="fade-up">
-                        <div class="relative h-[500px] overflow-hidden bg-white">
-                            <img src="images/exer31.png" alt="NLP Annotation Notebook Preview" 
-                                 class="w-full h-full object-contain transform transition-transform duration-300 hover:scale-105">
+                        <div class="relative h-64 overflow-hidden">
+                            <iframe 
+                                src="https://docs.google.com/spreadsheets/d/1tD2qARI8VgWYqOFNn6P_15iX7yMOICnCcmThNLJvPE8/preview"
+                                class="w-full h-full"
+                                frameborder="0">
+                            </iframe>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="text-white font-bold text-lg mb-1">Model Performance</h3>
+                                <p class="text-white/80 text-sm">Question answering evaluation results</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-table text-pink mr-2"></i>
+                                    <span class="text-sm text-gray-600">Google Sheets</span>
+                                </div>
+                                <span class="text-xs bg-pink/10 text-pink px-2 py-1 rounded-full">Spreadsheet</span>
+                            </div>
+                            <a href="https://docs.google.com/spreadsheets/d/1tD2qARI8VgWYqOFNn6P_15iX7yMOICnCcmThNLJvPE8/edit?usp=sharing" 
+                               target="_blank" 
+                               class="inline-flex items-center justify-center w-full px-4 py-2 pink-gradient-bg hover:opacity-90 text-white rounded-lg transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Open Spreadsheet
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Documentation -->
+                    <div class="floral-card rounded-xl shadow-xl overflow-hidden card-hover glow-effect" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative h-64 overflow-hidden">
+                            <iframe 
+                                src="https://docs.google.com/document/d/1YsXwTn8kUot5N7A6K4rbFlO_RS2XkfbD/preview"
+                                class="w-full h-full"
+                                frameborder="0">
+                            </iframe>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="text-white font-bold text-lg mb-1">Exercise Documentation</h3>
+                                <p class="text-white/80 text-sm">Detailed analysis and findings</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-file-word text-pink mr-2"></i>
+                                    <span class="text-sm text-gray-600">Google Docs</span>
+                                </div>
+                                <span class="text-xs bg-pink/10 text-pink px-2 py-1 rounded-full">Document</span>
+                            </div>
+                            <a href="https://docs.google.com/document/d/1YsXwTn8kUot5N7A6K4rbFlO_RS2XkfbD/edit?usp=sharing&ouid=103241913056901098867&rtpof=true&sd=true" 
+                               target="_blank"
+                               class="inline-flex items-center justify-center w-full px-4 py-2 pink-gradient-bg hover:opacity-90 text-white rounded-lg transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Open Document
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Implementation Notebook -->
+                    <div class="floral-card rounded-xl shadow-xl overflow-hidden card-hover glow-effect" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="images/m5.png" alt="Implementation Notebook Preview" 
+                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                             <div class="absolute bottom-4 left-4 right-4">
-                                <h3 class="text-white font-bold text-lg mb-1">NLP Annotation Notebook</h3>
-                                <p class="text-white/80 text-sm">Text analysis and NLP implementation with detailed annotations</p>
+                                <h3 class="text-white font-bold text-lg mb-1">Colab Notebook</h3>
+                                <p class="text-white/80 text-sm">Question answering implementation</p>
                             </div>
                         </div>
                         <div class="p-6">
@@ -213,10 +272,10 @@
                                 </div>
                                 <span class="text-xs bg-pink/10 text-pink px-2 py-1 rounded-full">Python</span>
                             </div>
-                            <a href="https://colab.research.google.com/drive/1M1ZjivbgbSF_kQ00FXxfuouKgFvFjvLD?usp=sharing" 
+                            <a href="https://colab.research.google.com/drive/1QGjuXmcr-mPomBLLjnvdKVaL5BJ84YgN?usp=sharing" 
                                target="_blank"
                                class="inline-flex items-center justify-center w-full px-4 py-2 pink-gradient-bg hover:opacity-90 text-white rounded-lg transition-colors">
-                                <i class="fas fa-external-link-alt mr-2"></i>View Notebook
+                                <i class="fas fa-external-link-alt mr-2"></i>Open Notebook
                             </a>
                         </div>
                     </div>
@@ -224,6 +283,7 @@
             </div>
         </div>
     </div>
+
 
 
     <script>
