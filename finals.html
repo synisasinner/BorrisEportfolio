@@ -91,10 +91,12 @@
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-peach to-cream min-h-screen" >
+<body class="bg-gradient-to-br from-peach to-cream min-h-screen relative">
+    <!-- Background Image -->
     <div class="fixed inset-0 z-0">
         <img src="images/flowers.png" alt="Flowers Background" class="w-full h-full object-cover opacity-90">
     </div>
+
     <!-- Navigation -->
     <nav class="bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 fixed w-full z-50 shadow-lg">
         <div class="container mx-auto px-4 py-4">
@@ -107,48 +109,176 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <div class="container mx-auto px-4 pt-24 pb-12">
-        <!-- Header -->
-        <div class="text-center mb-16 glass-effect p-8 shadow-xl glow-effect" data-aos="fade-down">
-            <h1 class="text-5xl font-bold text-pink glow-text mb-4 font-serif animate-pulse">Finals Portfolio</h1>
-            <p class="text-lg text-gray-800 font-medium">Journey through my final projects and accomplishments</p>
-        </div>
+    <!-- Main Content Container -->
+    <div class="relative z-10">
+        <div class="container mx-auto px-4 pt-24 pb-12">
+            <!-- Header -->
+            <div class="text-center mb-16 glass-effect p-8 shadow-xl glow-effect" data-aos="fade-down">
+                <h1 class="text-5xl font-bold text-pink glow-text mb-4 font-serif animate-pulse">Finals Portfolio</h1>
+                <p class="text-lg text-gray-800 font-medium">A collection of my final activities and achievements</p>
+            </div>
 
-        <!-- Coming Soon Message -->
-        <div class="max-w-4xl mx-auto mb-16" data-aos="fade-up">
-            <div class="floral-card rounded-xl shadow-xl p-8 text-center">
-                <div class="flex flex-col items-center space-y-4">
-                    <i class="fas fa-clock text-pink text-5xl mb-4 animate-pulse"></i>
-                    <h2 class="text-2xl font-bold text-pink glow-text">Activities Coming Soon</h2>
-                    <p class="text-gray-600 font-serif max-w-lg">
-                        Our final activities and projects are currently in progress. Check back soon to see our completed work and achievements!
-                    </p>
-                    <div class="flex space-x-2 mt-4">
-                        <span class="animate-bounce delay-100">•</span>
-                        <span class="animate-bounce delay-200">•</span>
-                        <span class="animate-bounce delay-300">•</span>
+            <!-- Activities Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 max-w-7xl mx-auto">
+                <!-- First Row: 3 cards -->
+                <div class="floral-card rounded-xl shadow-xl overflow-hidden card-hover glow-effect relative" data-aos="fade-up">
+                    <div class="card-image-wrapper px-6 pt-6">
+                        <img src="images/pr1.png" alt="Exercise F1" 
+                             class="rounded-xl h-48 w-full object-contain bg-white/50 transform transition-transform duration-300 hover:scale-105" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-flower text-pink opacity-50 mr-2"></i>
+                            <h2 class="text-xl font-bold text-pink glow-text">Exercise F1</h2>
+                        </div>
+                        <h3 class="text-gray-800 font-semibold mb-2">Building Chatbots</h3>
+                        <p class="text-gray-600 mb-4 flex-grow font-serif">
+                            November 18, 2024
+                        </p>
+                        <div class="text-right mt-4 h-12">
+                            <button class="inline-flex items-center px-6 py-2 pink-gradient hover:opacity-90 text-white rounded-full transition-all duration-300 glow-effect" 
+                                    onclick="window.open('final1.html')">
+                                <span class="relative z-10">View Details</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="floral-card rounded-xl shadow-xl overflow-hidden card-hover glow-effect relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image-wrapper px-6 pt-6">
+                        <img src="images/pr2.png" alt="Exercise F2" 
+                             class="rounded-xl h-48 w-full object-contain bg-white/50 transform transition-transform duration-300 hover:scale-105" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-flower text-pink opacity-50 mr-2"></i>
+                            <h2 class="text-xl font-bold text-pink glow-text">Exercise F2</h2>
+                        </div>
+                        <h3 class="text-gray-800 font-semibold mb-2">Collaborative Literature Review</h3>
+                        <p class="text-gray-600 mb-4 flex-grow font-serif">
+                            November 27, 2024
+                        </p>
+                        <div class="text-right mt-4 h-12">
+                            <button class="inline-flex items-center px-6 py-2 pink-gradient hover:opacity-90 text-white rounded-full transition-all duration-300 glow-effect" 
+                                    onclick="window.open('final2.html')">
+                                <span class="relative z-10">View Details</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="floral-card rounded-xl shadow-xl overflow-hidden card-hover glow-effect relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image-wrapper px-6 pt-6">
+                        <img src="images/pr3.png" alt="Exercise 9" 
+                             class="rounded-xl h-48 w-full object-contain bg-white/50 transform transition-transform duration-300 hover:scale-105" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-flower text-pink opacity-50 mr-2"></i>
+                            <h2 class="text-xl font-bold text-pink glow-text">Exercise 9</h2>
+                        </div>
+                        <h3 class="text-gray-800 font-semibold mb-2">Research Methodology</h3>
+                        <p class="text-gray-600 mb-4 flex-grow font-serif">
+                            November 30, 2024
+                        </p>
+                        <div class="text-right mt-4 h-12">
+                            <button class="inline-flex items-center px-6 py-2 pink-gradient hover:opacity-90 text-white rounded-full transition-all duration-300 glow-effect" 
+                                    onclick="window.open('final3.html')">
+                                <span class="relative z-10">View Details</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Row: 2 cards (left-aligned) -->
+                <div class="floral-card rounded-xl shadow-xl overflow-hidden card-hover glow-effect relative" data-aos="fade-up">
+                    <div class="card-image-wrapper px-6 pt-6">
+                        <img src="images/pr4.png" alt="Final Examination" 
+                             class="rounded-xl h-48 w-full object-contain bg-white/50 transform transition-transform duration-300 hover:scale-105" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-flower text-pink opacity-50 mr-2"></i>
+                            <h2 class="text-xl font-bold text-pink glow-text">Final Examination</h2>
+                        </div>
+                        <h3 class="text-gray-800 font-semibold mb-2">Final Examination</h3>
+                        <p class="text-gray-600 mb-4 flex-grow font-serif">
+                            TBA
+                        </p>
+                        <div class="text-right mt-4 h-12">
+                            <button class="inline-flex items-center px-6 py-2 pink-gradient hover:opacity-90 text-white rounded-full transition-all duration-300 glow-effect" 
+                                    onclick="window.open('final4.html')">
+                                <span class="relative z-10">View Details</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="floral-card rounded-xl shadow-xl overflow-hidden card-hover glow-effect relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image-wrapper px-6 pt-6">
+                        <img src="images/pr5.png" alt="ITE ELECTIVE 4 EPORTFOLIO" 
+                             class="rounded-xl h-48 w-full object-contain bg-white/50 transform transition-transform duration-300 hover:scale-105" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-flower text-pink opacity-50 mr-2"></i>
+                            <h2 class="text-xl font-bold text-pink glow-text">ITE ELECTIVE 4 EPORTFOLIO</h2>
+                        </div>
+                        <h3 class="text-gray-800 font-semibold mb-2">Course Portfolio</h3>
+                        <p class="text-gray-600 mb-4 flex-grow font-serif">
+                            December 07, 2024
+                        </p>
+                        <div class="text-right mt-4 h-12">
+                            <button class="inline-flex items-center px-6 py-2 pink-gradient hover:opacity-90 text-white rounded-full transition-all duration-300 glow-effect" 
+                                    onclick="window.open('final5.html')">
+                                <span class="relative z-10">View Details</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Overall Reflection - Coming Soon -->
-        <div class="max-w-4xl mx-auto" data-aos="fade-up">
-            <div class="glass-effect rounded-xl shadow-xl p-8 glow-effect">
-                <h2 class="flex items-center text-2xl font-bold text-pink glow-text mb-4">
-                    <i class="fas fa-lightbulb mr-2"></i>Final Reflection
-                </h2>
-                <div class="space-y-4">
-                    <div class="flex flex-col items-center py-8">
-                        <i class="fas fa-pen-fancy text-pink text-4xl mb-4"></i>
-                        <p class="text-gray-800 font-medium text-center">
-                            Our journey through this course is still unfolding. The final reflection will be shared here once we complete our activities and projects.
-                        </p>
-                        <div class="flex space-x-2 mt-4">
-                            <span class="animate-bounce delay-100">•</span>
-                            <span class="animate-bounce delay-200">•</span>
-                            <span class="animate-bounce delay-300">•</span>
+            <!-- Overall Reflection -->
+            <div class="max-w-6xl mx-auto" data-aos="fade-up">
+                <div class="glass-effect rounded-xl shadow-xl p-12 glow-effect">
+                    <h2 class="flex items-center text-3xl font-bold text-pink glow-text mb-8">
+                        <i class="fas fa-lightbulb mr-3"></i>Overall Reflection
+                    </h2>
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-6">
+                            <div class="flex-shrink-0 w-10 h-10 bg-pink/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-brain text-pink text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-3">Learning Experience</h3>
+                                <p class="text-gray-800 font-medium text-lg leading-relaxed">
+                                    Final Term was tiring yet fulfilling. I am glad I got to learn more about different kinds of model that is available in the internet. Creating chatbots and fine-tuning them was an exciting. I like the world of AI and machine learning.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-6">
+                            <div class="flex-shrink-0 w-10 h-10 bg-pink/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-trophy text-pink text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-3">Competition Experience</h3>
+                                <p class="text-gray-800 font-medium text-lg leading-relaxed">
+                                    The most unexpected thing during this term was me, and my friends, joining a competition. Although we didn't win, I am very much grateful for the experience and to come out of my comfort zone. It was thrilling and I am proud of my friends for being brave.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-6">
+                            <div class="flex-shrink-0 w-10 h-10 bg-pink/10 rounded-full flex items-center justify-center">
+                                <i class="fas fa-users text-pink text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-3">Team Collaboration</h3>
+                                <p class="text-gray-800 font-medium text-lg leading-relaxed">
+                                    The project gave a headache, but seeing that it was worth all the struggle of our team.. it was worth it all. Working with them was fun and I am glad I got to know them more. The collaboration strengthened our bonds and taught us valuable lessons about teamwork and perseverance.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -156,13 +286,21 @@
         </div>
     </div>
 
-
-
     <script>
         AOS.init({
-            duration: 1000,
+            duration: 1200,
             once: true,
-            offset: 100
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
     </script>
 </body>
